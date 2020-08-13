@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "senac_sig_wrapper"
+version = "0.1.0"
+description = "Wrapper para a api do sig"
+authors = ["Isaque Alves <isaquealves@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0.1"
+pudb = "^2019.2"
+pytest-pudb = "^0.7.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
