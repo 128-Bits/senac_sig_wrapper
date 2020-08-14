@@ -4,7 +4,7 @@ from tests.helper import not_raises
 from senac_sig_wrapper.client import SigClient
 
 
-class TestGetResponseClient:
+class TestSigClient:
     def setup(self):
         self.client = SigClient()
 
@@ -19,5 +19,8 @@ class TestGetResponseClient:
         client_init = inspect.getfullargspec(SigClient.__init__)
         assert "config" in client_init.args
 
-    def test_has_cities(self):
+    def test_has_administration(self):
         assert hasattr(self.client, "administration")
+    
+    def test_has_finance(self):
+        assert hasattr(self.client, "finance")

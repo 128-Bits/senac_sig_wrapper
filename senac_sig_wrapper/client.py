@@ -3,6 +3,7 @@
 from senac_sig_wrapper.settings import Config
 from senac_sig_wrapper.request import Request
 from senac_sig_wrapper.resources.administration import Administration
+from senac_sig_wrapper.resources.finance import Finance
 
 
 class SigClient:
@@ -14,5 +15,9 @@ class SigClient:
         self.request = Request(self._config)
 
     @property
-    def adminstration(self):
+    def administration(self):
         return Administration(self.request)
+    
+    @property
+    def finance(self):
+        return Finance(self.request)

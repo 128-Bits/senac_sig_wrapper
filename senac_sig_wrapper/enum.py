@@ -31,3 +31,10 @@ class ErrorCodesEnum(enum.Enum):
         ][
             0
         ]  # TODO: should improve this(?).
+
+
+class EstadosVoucherEnum(enum.Enum):
+    UtilizadoPorContrato = "UtilizadoPorContrato"
+    UtilizadoPorRequisicaoDePagamento = "UtilizadoPorRequisicaoDePagamento"
+    Cancelado = "Cancelado"
+    NaoUtilizado = "NaoUtilizado"

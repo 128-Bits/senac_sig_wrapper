@@ -34,33 +34,34 @@ class TestAdministration:
 
     def test_has_get_cities(self):
         assert hasattr(self.administration, "get_cities")
-    
+
     def test_has_get_person(self):
         assert hasattr(self.administration, "get_person")
-    
+
     def test_has_get_business(self):
         assert hasattr(self.administration, "get_business")
-    
+
     def test_has_get_op_unit(self):
         assert hasattr(self.administration, "get_op_unit")
-    
+
     def test_get_cities(self):
         self.administration.get_cities()
         assert self.mock_get.is_called()
-    
+
     def test_get_person(self):
         self.administration.get_person("a")
         assert self.mock_get.is_called()
-    
+
     def test_get_business(self):
         self.administration.get_business("a")
         assert self.mock_get.is_called()
-    
+
     def test_get_op_unit(self):
         self.administration.get_op_unit()
         assert self.mock_get.is_called_with("/api/unidade-operativa")
-    
+
     def test_get_full_op_unit_list(self):
         self.administration.get_op_unit(complete=True)
-        assert self.mock_get.is_called_with("/api/unidade-operativa/list-completa")
-    
+        assert self.mock_get.is_called_with(
+            "/api/unidade-operativa/lista-completa"
+        )
