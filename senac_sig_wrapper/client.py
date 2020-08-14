@@ -4,6 +4,8 @@ from senac_sig_wrapper.settings import Config
 from senac_sig_wrapper.request import Request
 from senac_sig_wrapper.resources.administration import Administration
 from senac_sig_wrapper.resources.finance import Finance
+from senac_sig_wrapper.resources.registration import Registration
+from senac_sig_wrapper.resources.course import Course
 
 
 class SigClient:
@@ -21,3 +23,11 @@ class SigClient:
     @property
     def finance(self):
         return Finance(self.request)
+    
+    @property
+    def registration(self):
+        return Registration(self.request)
+    
+    @property
+    def course(self):
+        return Course(self.request)

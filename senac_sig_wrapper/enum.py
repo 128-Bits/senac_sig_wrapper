@@ -38,3 +38,21 @@ class EstadosVoucherEnum(enum.Enum):
     UtilizadoPorRequisicaoDePagamento = "UtilizadoPorRequisicaoDePagamento"
     Cancelado = "Cancelado"
     NaoUtilizado = "NaoUtilizado"
+
+
+class TipoRecursoFinanceiroEnum(enum.Enum):
+    GRATUITO = 1
+    COMERCIAL = 2
+
+    @classmethod
+    def choices(cls):
+        return tuple((i.name.capitalize(), i.value) for i in cls)
+
+
+class TipoPessoaDemandaEnum(enum.Enum):
+    PESSOA_FISICA = ("Pessoa Física", 1)
+    PESSOA_JURIDICA = ("Pessoa Jurídica", 2)
+    
+    @classmethod
+    def choices(cls):
+        return tuple((i.value[0], i.value[1]) for i in cls)

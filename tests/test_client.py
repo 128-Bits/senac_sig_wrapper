@@ -24,3 +24,10 @@ class TestSigClient:
     
     def test_has_finance(self):
         assert hasattr(self.client, "finance")
+    
+    def test_has_registration(self):
+        assert hasattr(self.client, "registration")
+    
+    def test_has_course(self):
+        assert hasattr(self.client, "course")
+    
