@@ -28,11 +28,11 @@ class Registration(BaseResource):
 
     def get_demand_type(self):
         response = self.request.get(self.DEMAND_TYPE_URL)
-        return response.json()
+        return response
 
     def get_communication_channels(self):
         response = self.request.get(self.COMMUNICATION_CHANNELS_URL)
-        return response.json()
+        return response
 
     def send_demand(self, data: Union[Dict[str, Any], None] = None):
         if not data:
@@ -53,13 +53,13 @@ class Registration(BaseResource):
                 )
             )
         response = self.request.post(self.SEND_DEMAND_URL, data)
-        return response.json()
+        return response
 
     def get_students_with_class(self):
         response = self.request.get(self.STUDENTS_WITH_CLASS_URL)
-        return response.json()
+        return response
 
     def get_students_to_integrate(self):
         response = self.request.get(self.STUDENTS_TO_INTEGRATE_URL)
-        return response.json()
+        return response
 

@@ -20,6 +20,6 @@ class Finance(BaseResource):
             "/api/voucher/voucher-por-vigencia", 
             params=params
         )
-        return response.json()
+        return response
     
 

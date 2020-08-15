@@ -75,7 +75,7 @@ class Course(BaseResource):
 
     def get_segments(self):
         response = self.request.get(self.COURSE_SEGMENT_URL)
-        return response.json
+        return response
 
 
 
