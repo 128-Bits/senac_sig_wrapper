@@ -6,7 +6,7 @@ from senac_sig_wrapper import resources
 
 class TestBaseResource:
     def setup(self):
-        config = Config()
+        config = Config(token='teste')
         request = Request(config)
         self.baseres = resources.BaseResource(request)
 

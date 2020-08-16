@@ -12,7 +12,7 @@ class TestCourse:
     monkeypatch = MonkeyPatch()
 
     def setup(self):
-        self.config = Config()
+        self.config = Config(token='teste')
         self.request = Request(self.config)
         self.course = course.Course(self.request)
         self.mock_get = mock.MagicMock()

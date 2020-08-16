@@ -38,15 +38,12 @@ class TestConfig:
         os.environ["BASE_URL"] = BASE_URL
 
     def test_raise_no_token(self):
-        TOKEN = os.environ.pop(
-            "ACCESS_TOKEN",
-            "oSQMBAmyfHrQrHBBfZEnDOlvsCJpaaVF"
-        )
+
         path = Path(__file__).parent
         config = Config(path)
-        with pytest.raises(decouple.UndefinedValueError):
+        del config.access_token
+        with pytest.raises(ValueError):
             config.access_token
-        os.environ["ACCESS_TOKEN"] = TOKEN
 
     def test_debug(self):
         assert self.configobj.debug is False
@@ -61,3 +58,9 @@ class TestConfig:
             )
             == "DEBUG"
         )
+
+    def test_set_new_token(self):
+        config = Config()
+        config.access_token = 'new_token'
+        assert config.access_token == 'new_token'
+        

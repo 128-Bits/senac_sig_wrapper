@@ -12,7 +12,7 @@ class TestFinance:
     monkeypatch = MonkeyPatch()
 
     def setup(self):
-        self.config = Config()
+        self.config = Config(token='teste')
         self.request = Request(self.config)
         self.finance = finance.Finance(self.request)
         self.mock_get = mock.MagicMock()

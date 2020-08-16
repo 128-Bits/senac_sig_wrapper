@@ -1,18 +1,21 @@
 import inspect
 import pytest
 from tests.helper import not_raises
+from senac_sig_wrapper.settings import Config
 from senac_sig_wrapper.client import SigClient
 
 
 class TestSigClient:
     def setup(self):
-        self.client = SigClient()
+        self.config = Config(token='token')
+        self.client = SigClient(config=self.config)
 
     def test_is_class(self):
         assert inspect.isclass(SigClient)
 
     def test_can_instantiate(self):
-        client = SigClient()
+
+        client = SigClient(self.config)
         assert client is not None
 
     def test_need_config(self):

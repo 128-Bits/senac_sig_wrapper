@@ -13,7 +13,7 @@ class TestRequest:
     monkeypatch = MonkeyPatch()
 
     def setup(self):
-        config = Config()
+        config = Config(token='test')
         self.requestobj = Request(config)
 
     def test_is_class(self):
