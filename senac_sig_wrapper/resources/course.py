@@ -47,7 +47,7 @@ GET
 /api/unidade-curricular/detalhe/{unidadeCurricularId}
 Detalhe da Unidade Curricular.
 """
-from typing import Any, Dict, Union
+from typing import Any, Dict, Union, overload
 from senac_sig_wrapper.resources import BaseResource
 
 
@@ -77,7 +77,19 @@ class Course(BaseResource):
         response = self.request.get(self.COURSE_SEGMENT_URL)
         return response
 
+    def get_courses(self):
+        response = self.request.get(self.COURSES_FOR_PUBLIC_URL)
+        return response
+ 
+    def get_filtered_courses(self, params):
+        response = self.request.get(self.COURSES_FOR_PUBLIC_URL, params=params)
+        return response
 
-
-
+    def get_modalities(self):
+        response = self.request.get(self.MODALITY_URL)
+        return response
+    
+    def get_tech_axis(self):
+        response = self.request.get(self.TECH_AXIS_URL)
+        return response
 

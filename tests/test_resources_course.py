@@ -35,3 +35,20 @@ class TestCourse:
     def test_get_segments(self):
         self.course.get_segments()
         self.mock_get.assert_called_once()
+        
+    def test_get_courses(self):
+        self.course.get_courses()
+        self.mock_get.assert_called_once()
+    
+    def test_get_filtered_courses(self):
+        self.course.get_filtered_courses(params={'segmentoId': 1})
+        self.mock_get.assert_called_once()
+
+    def test_get_modalities(self):
+        self.course.get_modalities()
+        self.mock_get.assert_called_once()
+    
+    def test_get_tech_axis(self):
+        self.course.get_tech_axis()
+        self.mock_get.assert_called_once()
+    
