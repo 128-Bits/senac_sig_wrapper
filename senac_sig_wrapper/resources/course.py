@@ -62,7 +62,7 @@ class Course(BaseResource):
     
     TECH_AXIS_URL = "/api/eixo-tecnologico"
     MODALITY_URL = "/api/modalidade"
-    COURSES_FOR_PUBLIC_URL = "/plano-curso/para-divulgacao"
+    COURSES_FOR_PUBLIC_URL = f"{_CPBASE_URL}/para-divulgacao"
     COURSE_PLAN_INFO_URL = f"{_CPBASE_URL}/identificacao/"
     COURSE_PLAN_DETAILS_URL = f"{_CPBASE_URL}/informacoes/"
     COURSE_PLAN_REQUIREMENTS_URL = f"{_CPBASE_URL}/requirements/"
