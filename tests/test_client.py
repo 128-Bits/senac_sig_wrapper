@@ -34,3 +34,6 @@ class TestSigClient:
     def test_has_course(self):
         assert hasattr(self.client, "course")
     
+    def test_has_classes(self):
+        assert hasattr(self.client, "classes")
+    

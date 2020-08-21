@@ -10,7 +10,7 @@ class Administration(BaseResource):
     """
 
     def get_cities(self):
-        response = self.request.get("/api/cidades")
+        response = self.request.get("/api/cidade")
         return response
 
     def get_person(self, param_cpf: str = ""):
