@@ -42,6 +42,11 @@ class TestCourse:
     def test_get_open_spaces(self):
         with pytest.raises(ValueError):
             self.classes.get_open_spaces()
+    
+    def test_get_list(self):
+        self.classes.get_list(params={"CodigoDoPlano": 1})
+        self.mock_get.assert_called_once()
+        self.mock_get.assert_called_with(url="https://localhost/api/turma", params={"CodigoDoPlano": 1})
         
     def test_get_single_class(self):
         self.classes.get_single_class(1)
