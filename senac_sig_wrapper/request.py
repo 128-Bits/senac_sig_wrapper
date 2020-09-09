@@ -35,7 +35,7 @@ class Request:
         """A wrapper for requests.session.post
 
         """
-        return self.session.post(url, data=data, **kwargs)
+        return self.session.post(url=f"{self.__config.base_url}{url}", data=data, **kwargs)
 
     def delete(self, url: str = ""):
         """A wrapper for requests.Session.delete
