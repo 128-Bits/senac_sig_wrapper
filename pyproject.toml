@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "senac_sig_wrapper"
-version = "0.1.0"
+version = "1.0.0"
 description = "Wrapper para a api do sig"
 authors = ["Isaque Alves <isaquealves@gmail.com>"]
 
