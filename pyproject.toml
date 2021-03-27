@@ -15,5 +15,6 @@ pytest-pudb = "^0.7.0"
 pytest-cov = "^2.10.0"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["cryptography<3.0"]
+requires = ["poetry>=1.0"]
 build-backend = "poetry.masonry.api"
