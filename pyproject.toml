@@ -7,6 +7,7 @@ authors = ["Isaque Alves <isaquealves@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.24.0"
+cryptography = "^2.9.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0.1"
@@ -15,6 +16,5 @@ pytest-pudb = "^0.7.0"
 pytest-cov = "^2.10.0"
 
 [build-system]
-cryptography = "^2.8"
 requires = ["poetry>=1.0"]
 build-backend = "poetry.masonry.api"
