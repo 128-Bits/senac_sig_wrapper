@@ -84,6 +84,10 @@ class Course(BaseResource):
     def get_filtered_courses(self, params):
         response = self.request.get(self.COURSES_FOR_PUBLIC_URL, params=params)
         return response
+    
+    def get_informations(self, class_id):
+        response = self.request.get(f"{self.COURSE_PLAN_DETAILS_URL}/{class_id}")
+        return response
 
     def get_modalities(self):
         response = self.request.get(self.MODALITY_URL)
